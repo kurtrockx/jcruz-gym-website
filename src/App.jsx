@@ -50,7 +50,7 @@ export default function App() {
         <PicWithText2 img={gymInfo1} title={"PRICE LIST"} content={""} />
         <PicWithText2 img={gymInfo2} title={"PROMOS"} flex={3} content={""} />
       </div>
-      <p className="serif py-10 text-center text-2xl text-white">
+      <p className="serif py-10 text-center text-2xl text-white italic">
         “To God be All the Glory”
       </p>
 
@@ -62,7 +62,7 @@ export default function App() {
           <h1 className="text-right text-yellow-500">GET IN</h1>
           <h1 className="text-right text-yellow-500">TOUCH</h1>
         </div>
-        <div className="flex flex-3/5 items-center">
+        <div className="flex flex-3/5 items-center" id="contact">
           <h2 className="serif max-w-120 text-center text-3xl text-white">
             "Ready to transform your body and boost your health? Let’s get
             started—reach out today and take the first step toward a stronger
@@ -129,8 +129,8 @@ function PicWithText2({ img, title, flex = 2 }) {
 
 function Contact({ img, text }) {
   return (
-    <div className="flex items-center gap-6 text-yellow-500">
-      <img src={img} alt={`${img}`} className="max-h-12" />
+    <div className="flex items-center gap-6 px-16 text-yellow-500">
+      <img src={img} alt={`${img}`} className="max-h-8" />
       <p>{text}</p>
     </div>
   );
