@@ -8,8 +8,11 @@ import gymInfo2 from "./assets/gymInfo2.png";
 import contact1 from "./assets/contact1.svg";
 import contact2 from "./assets/contact2.svg";
 import contact3 from "./assets/contact3.svg";
+import { useState } from "react";
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState("home");
+
   return (
     <div className="max-w-[100svw] bg-black">
       <Navbar />
@@ -22,16 +25,31 @@ export default function App() {
         />
       </div>
       <div className="py-30" id="about">
-        <PicWithText img={gym1} title={"HISTORY OF THE GYM"} reverse={true} />
+        <PicWithText
+          img={gym1}
+          title={"HISTORY OF THE GYM"}
+          reverse={true}
+          content={""}
+        />
         <PicWithText img={gym2} title={"OTHER INFO ABOUT THE GYM"} />
       </div>
       <div className="pb-20">
-        <PicWithText img={gym3} title={"MEET THE TEAM"} imgWidth={4} />
+        <PicWithText
+          img={gym3}
+          title={"MEET THE TEAM"}
+          imgWidth={4}
+          content={""}
+        />
       </div>
 
       <div className="mx-auto flex max-w-7xl gap-4 px-10 pt-30 pb-10">
-        <PicWithText2 img={gymInfo1} title={"PRICE LIST"} />
-        <PicWithText2 img={gymInfo2} title={"PRICE LIST"} flex={3} />
+        <PicWithText2 img={gymInfo1} title={"PRICE LIST"} content={""} />
+        <PicWithText2
+          img={gymInfo2}
+          title={"PROMOS"}
+          flex={3}
+          content={""}
+        />
       </div>
       <p className="serif py-10 text-center text-2xl text-white">
         “To God be All the Glory”
@@ -74,7 +92,7 @@ export default function App() {
   );
 }
 
-function PicWithText({ img, title, text, reverse, imgWidth = 2 }) {
+function PicWithText({ img, title, text, reverse, imgWidth = 2, content }) {
   const widthMap = {
     1: "max-w-1/7",
     2: "max-w-2/7",
@@ -94,15 +112,7 @@ function PicWithText({ img, title, text, reverse, imgWidth = 2 }) {
       />
       <div className="max-w-3/5 flex-1 space-y-2 text-yellow-500">
         <h1 className="serif text-6xl">{title}</h1>
-        <p className="text-justify text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-          culpa? Rerum dolorem unde exercitationem, accusantium, dignissimos
-          perspiciatis ut itaque id autem odio modi tenetur quod maxime adipisci
-          ab a officia. Doloremque soluta sapiente, culpa praesentium saepe
-          deserunt repudiandae libero hic, asperiores ipsam rerum. Minus
-          perspiciatis reiciendis voluptas officiis, esse eos maiores ut iste
-          aut et adipisci numquam in corporis mollitia!
-        </p>
+        <p className="text-justify text-sm">{content} </p>
       </div>
     </div>
   );

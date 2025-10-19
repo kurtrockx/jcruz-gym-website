@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { act, useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 
 export default function Navbar() {
   // State to track if the banner is out of view
+  const [activeTab, setActiveTab] = useState("home");
+
   const [showLogo, setShowLogo] = useState(false);
 
   useEffect(() => {
@@ -51,14 +53,23 @@ export default function Navbar() {
         </h1>
       </div>
       <ul className="flex items-center gap-8 text-xl uppercase">
-        <li>
+        <li className="relative" onClick={() => setActiveTab("home")}>
           <a href="#home">Home</a>
+          <div
+            className={`absolute bottom-0 left-0 h-0.5 w-0 bg-[#fedc33] duration-200 ${activeTab === "home" && "w-full"}`}
+          ></div>
         </li>
-        <li>
+        <li className="relative" onClick={() => setActiveTab("about")}>
           <a href="#about">About Us</a>
+          <div
+            className={`absolute bottom-0 left-0 h-0.5 w-0 bg-[#fedc33] duration-200 ${activeTab === "about" && "w-full"}`}
+          ></div>
         </li>
-        <li>
+        <li className="relative" onClick={() => setActiveTab("contacts")}>
           <a href="#contacts">Contacts</a>
+          <div
+            className={`absolute bottom-0 left-0 h-0.5 w-0 bg-[#fedc33] duration-200 ${activeTab === "contacts" && "w-full"}`}
+          ></div>
         </li>
       </ul>
     </nav>
