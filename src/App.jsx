@@ -31,7 +31,11 @@ export default function App() {
           reverse={true}
           content={""}
         />
-        <PicWithText img={gym2} title={"OTHER INFO ABOUT THE GYM"} />
+        <PicWithText
+          img={gym2}
+          title={"OTHER INFO ABOUT THE GYM"}
+          content={""}
+        />
       </div>
       <div className="pb-20">
         <PicWithText
@@ -44,12 +48,7 @@ export default function App() {
 
       <div className="mx-auto flex max-w-7xl gap-4 px-10 pt-30 pb-10">
         <PicWithText2 img={gymInfo1} title={"PRICE LIST"} content={""} />
-        <PicWithText2
-          img={gymInfo2}
-          title={"PROMOS"}
-          flex={3}
-          content={""}
-        />
+        <PicWithText2 img={gymInfo2} title={"PROMOS"} flex={3} content={""} />
       </div>
       <p className="serif py-10 text-center text-2xl text-white">
         “To God be All the Glory”
