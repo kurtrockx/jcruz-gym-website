@@ -108,7 +108,7 @@ export default function App() {
         <Contact
           img={contact1}
           text={
-            "#273 3rd flr., Anette' s Bldg., J.P Rizal St. Manggahan, Rodriguez Rizal"
+            "#237 3rd flr., Anette' s Bldg., J.P Rizal St. Manggahan, Rodriguez Rizal"
           }
         />
         <Contact
