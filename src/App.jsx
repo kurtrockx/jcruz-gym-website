@@ -74,7 +74,7 @@ export default function App() {
       <p className="italic text-lg text-gray-300">For more Inquiries:</p>
       <div className="border border-yellow-600 bg-zinc-800 p-6 inline-block">
         <p className="text-white text-xl font-semibold">JOHN HUNTER CRUZ</p>
-        <p className="text-yellow-400 text-lg font-medium">0920-8055-992</p>
+        <p className="text-yellow-400 text-lg font-medium">0962-5902-720</p>
       </div>
     </div>
   </div>
